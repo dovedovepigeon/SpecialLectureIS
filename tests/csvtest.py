@@ -5,7 +5,7 @@ from csvsample import CSVPrinter
 class TestCSVPrinter(unittest.TestCase):
 
     def test_method1(self):
-        printer = CSVPrinter("../sample.csv")
+        printer = CSVPrinter("sample.csv")
         lines = printer.read()
         self.assertEqual(3, len(lines))
 
