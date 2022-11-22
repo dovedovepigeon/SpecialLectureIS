@@ -10,7 +10,7 @@ class TestCSVPrinter(unittest.TestCase):
         self.assertEqual(3, len(lines))
 
     def test_method2(self):
-        printer = CSVPrinter("../sample.csv")
+        printer = CSVPrinter("sample.csv")
         lines = printer.read()
         self.assertEqual("value2B", lines[1][1])
 
