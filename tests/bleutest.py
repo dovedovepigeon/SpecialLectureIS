@@ -1,24 +1,20 @@
 import unittest
-from csvsample import CSVPrinter
+from calculate_oracle_bleu import calculate_oracle_bleu
 
 
-class TestCSVPrinter(unittest.TestCase):
-
-    def test_method1(self):
-        printer = CSVPrinter("sample.csv")
-        lines = printer.read()
-        self.assertEqual(3, len(lines))
-
-    def test_method2(self):
-        printer = CSVPrinter("sample.csv")
-        lines = printer.read()
-        self.assertEqual("value2B", lines[1][1])
-
-    def test_method3(self):
+class TestCalculateOracleBleu(unittest.TestCase):
+    def test_not_found_hyps(self):
         with self.assertRaises(FileNotFoundError):
-            printer = CSVPrinter("not_exist.csv")
-            printer.read()
+            calculate_oracle_bleu("not_exist.txt", "refs.txt", 2, [1, 2], "exp")
+
+    def test_not_found_refs(self):
+        with self.assertRaises(FileNotFoundError):
+            calculate_oracle_bleu("hyps.txt", "not_exist.txt", 2, [1, 2], "exp")
+
+    def test_oracle_bleu(self):
+        oracles = calculate_oracle_bleu("hyps.txt", "refs.txt", 2, [1, 2], "exp")
+        self.assertEqual(["38.13", "82.48"], oracles)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

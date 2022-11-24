@@ -88,6 +88,8 @@ def calculate_oracle_bleu(
     print(*[f"oracle@{n}" for n in n_oracle], sep="\t")
     print(*oracle_scores, sep="\t")
 
+    return oracle_scores
+
 
 def main():
     parser = argparse.ArgumentParser(

@@ -3,7 +3,6 @@ from csvsample import CSVPrinter
 
 
 class TestCSVPrinter(unittest.TestCase):
-
     def test_method1(self):
         printer = CSVPrinter("sample.csv")
         lines = printer.read()
@@ -20,5 +19,5 @@ class TestCSVPrinter(unittest.TestCase):
             printer.read()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
