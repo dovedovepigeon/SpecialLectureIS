@@ -8,6 +8,5 @@ jobs:
       - name: Install Dependencies
         run: |
           cd $GITHUB_WORKSPACE
-          pip install sacrebleu
       - name: Run Tests
         run: python -m unittest tests/*.py

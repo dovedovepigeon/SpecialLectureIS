@@ -20,7 +20,6 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install tox
-          cd $GITHUB_WORKSPACE
           pip install sacrebleu
       - name: Run tox
         run: tox -e py
