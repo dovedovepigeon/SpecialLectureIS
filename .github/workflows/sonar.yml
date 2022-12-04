@@ -19,8 +19,9 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Install Dependencies
         run: |
-          pip install sacrebleu
           pip install tox
+          cd $GITHUB_WORKSPACE
+          pip install sacrebleu
       - name: Run tox
         run: tox -e py
       - name: SonarCloud Scan
