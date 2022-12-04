@@ -1,5 +1,7 @@
 import unittest
-from calculate_oracle_bleu import calculate_oracle_bleu
+from SpecialLectureIS1.speciallectureis.calculate_oracle_bleu import (
+    calculate_oracle_bleu,
+)
 
 
 class TestCalculateOracleBleu(unittest.TestCase):
