@@ -14,8 +14,8 @@ class TestCSVPrinter(unittest.TestCase):
         self.assertEqual("value2B", lines[1][1])
 
     def test_method3(self):
-        printer = CSVPrinter("sample.tsv", tsv=True)
-        lines = printer.read()
+        printer = CSVPrinter("sample.tsv")
+        lines = printer.read(tsv=True)
         self.assertEqual("value2B", lines[1][1])
 
     def test_method4(self):
