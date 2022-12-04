@@ -16,7 +16,3 @@ class TestCalculateOracleBleu(unittest.TestCase):
     def test_oracle_bleu(self):
         oracles = calculate_oracle_bleu("hyps.txt", "refs.txt", 2, [1, 2], "exp")
         self.assertEqual(["38.13", "82.48"], oracles)
-
-
-if __name__ == "__main__":
-    unittest.main()
