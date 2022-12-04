@@ -47,7 +47,6 @@ def calculate_oracle_bleu(
     s_bleu = sacrebleu.BLEU(
         smooth_method="add-k", smooth_value=1, effective_order=True, trg_lang=trg_lang
     )
-    # s_bleu = sacrebleu.BLEU(smooth_method="exp", effective_order=True)
     bleu = sacrebleu.BLEU(smooth_method="none", trg_lang=trg_lang)
 
     with open(input_path, mode="r") as f_input:
