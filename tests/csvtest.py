@@ -1,15 +1,15 @@
 import unittest
-from csvsample import CSVPrinter
+from SpecialLectureIS1.speciallectureis.csvsample import CSVPrinter
 
 
 class TestCSVPrinter(unittest.TestCase):
     def test_method1(self):
-        printer = CSVPrinter("sample.csv")
+        printer = CSVPrinter("../sample.csv")
         lines = printer.read()
         self.assertEqual(3, len(lines))
 
     def test_method2(self):
-        printer = CSVPrinter("sample.csv")
+        printer = CSVPrinter("../sample.csv")
         lines = printer.read()
         self.assertEqual("value2B", lines[1][1])
 
