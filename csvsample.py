@@ -5,7 +5,7 @@ class CSVPrinter:
     def __init__(self, file_name):
         self.file_name = file_name
 
-    def read(self, tsv=True):
+    def read(self, tsv=False):
         with open(self.file_name) as f:
             if tsv:
                 reader = csv.reader(f, delimiter="\t")
