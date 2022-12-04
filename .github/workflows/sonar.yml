@@ -18,7 +18,9 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install Dependencies
-        run: pip install tox
+        run: |
+          pip install sacrebleu
+          pip install tox
       - name: Run tox
         run: tox -e py
       - name: SonarCloud Scan
