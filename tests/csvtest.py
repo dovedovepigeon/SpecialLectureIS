@@ -1,5 +1,5 @@
 import unittest
-from SpecialLectureIS1.speciallectureis.csvsample import CSVPrinter
+from speciallectureis.csvsample import CSVPrinter
 
 
 class TestCSVPrinter(unittest.TestCase):
